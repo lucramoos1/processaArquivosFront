@@ -1,0 +1,292 @@
+/* ── Container ── */
+.uploader-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ── Card ── */
+.uploader-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+}
+
+/* ── Header ── */
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon-csv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.icon-csv svg {
+  width: 28px;
+  height: 28px;
+}
+
+.card-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ── File inputs ── */
+.file-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.file-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.label-icon {
+  font-size: 1.1rem;
+}
+
+.label-hint {
+  font-weight: 400;
+  color: #9ca3af;
+  font-size: 0.82rem;
+  margin-left: auto;
+}
+
+.file-drop {
+  position: relative;
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+
+.file-drop:hover {
+  border-color: #6366f1;
+  background: #f5f3ff;
+}
+
+.file-drop.has-file {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.file-drop input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-placeholder {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.file-name {
+  color: #4338ca;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ── Buttons ── */
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6366f1;
+  background: transparent;
+  border: 2px solid #6366f1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #eef2ff;
+}
+
+/* ── Spinner ── */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Alerts ── */
+.alert {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.alert-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.alert strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.alert p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+/* ── Tags (new names) ── */
+.new-names {
+  margin-top: 0.5rem;
+}
+
+.new-names > span {
+  font-size: 0.85rem;
+  color: #166534;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: #dcfce7;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #15803d;
+}
+
+/* ── Info section ── */
+.info-section {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.info-section h3 {
+  font-size: 0.95rem;
+  color: #374151;
+  margin: 0 0 0.75rem;
+}
+
+.info-section ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.info-section li {
+  color: #6b7280;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.info-section li strong {
+  color: #374151;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .uploader-card {
+    padding: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
